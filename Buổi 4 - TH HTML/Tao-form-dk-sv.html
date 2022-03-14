@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="./style-registration.css">
+</head>
+<body>
+    <form action="studentRegistration.php">
+        <div class="Title">
+            <h1>ĐĂNG KÝ HỌC VIÊN</h1>
+        </div>
+        <div style="margin-left: 1%;">
+            <div class="name">
+                <span>Họ và tên</span>
+                <input type="text" name="name" required>
+            </div>
+            <div class="date">
+                <span>Ngày sinh</span>
+                <input type="date" value="date" required>
+            </div>
+            <div class="gender">
+                <span>Giới tính</span>
+                <input type="radio" name="gender" value="Nam">Nam
+                <input type="radio" name="gender" value="Nữ">Nữ
+            </div>
+            <div class="address">
+                <div>
+                    <span>Địa chỉ</span>
+                </div>
+                <textarea name="address" cols="30" rows="5"></textarea>
+            </div>
+            <div class="class">
+                <span>Lớp</span>
+                <select name="class">
+                    <option value="--Chọn Lớp--">--Chọn Lớp--</option>
+                    <option value="1A">1A</option>
+                    <option value="2A">2A</option>
+                    <option value="3A">3A</option>
+                    <option value="4A">4A</option>
+                    <option value="5A">5A</option>
+                    <option value="1B">1B</option>
+                    <option value="2B">2B</option>
+                    <option value="3B">3B</option>
+                    <option value="4B">4B</option>
+                    <option value="5B">5B</option>
+                </select>
+            </div>
+            <div class="email">
+                <span>Email</span>
+                <input type="text" name="email">
+            </div>
+            <div class="phone">
+                <span>Số điện thoại</span>
+                <input type="tel" name="phone">
+            </div>
+            <div class="button">
+                <button type="submit">Đăng ký</button>
+                <input type="reset" value="Nhập lại">
+            </div>
+        </div>
+    </form>
+</body>
+</html>
