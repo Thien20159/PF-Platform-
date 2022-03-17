@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container" id="index-content">
+        <h1>Hello</h1>
+        <h2 id="h2">Demo Remove</h2>
+    </div>
+    <script>
+        let indexContent = document.getElementById('index-content');
+        // tao 1 the p
+        let p = document.createElement('p');
+        // them noi dung cho the moi tao
+        // a.innerHTML = 'https://www.facebook.com/';
+        p.innerText = "This is an added p tag";
+        // them phan tu vao DOM
+        let a = document.createElement('a');
+        a.appendChild(p)
+        indexContent.appendChild(a);
+        // indexContent.prepend(a);
+
+        // Xoa phan tu
+        let h2 = document.getElementById('h2');
+        h2.remove();
+        
+        
+        
+        
+    </script>
+</body>
+</html>
