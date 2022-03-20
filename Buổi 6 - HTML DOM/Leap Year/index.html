@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leap Year</title>
+</head>
+<body>
+    <div>
+        <input id="inPut" type="text" placeholder="Nhập vào năm " name="inputYear"> 
+        <button onclick="leapYear()">Oke</button>
+    </div>
+    <!-- JS -->
+    <script>
+        function leapYear(){
+            let a = document.getElementById('inPut').value;
+            if ((a % 400 == 0) || (a % 4 == 0 && a % 100 != 0)){
+                console.log(a +" là năm nhuận")
+            }
+            else{
+                console.log(a +" không là năm nhuận")
+            }
+        }
+    </script>
+</body>
+</html>
