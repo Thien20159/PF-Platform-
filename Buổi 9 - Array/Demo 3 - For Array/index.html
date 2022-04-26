@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var input = parseInt(prompt("Nhap vao gia tri can tim!"))
+        var arrayNumber = [2, 3, 5, 1, 4, 7, 9, 8, 6]
+        var i = 0
+        function check() {
+            // var array = ["hana", "sara", "rumble"]
+            for (i; i < arrayNumber.length; i++) {
+                if (input == arrayNumber[i]) {
+                    alert("tim thay tai vi tri thu : "+i);
+                }
+                document.write(i+" = "+arrayNumber[i]+"<hr>");
+            } 
+            alert(arrayNumber.length)
+        }
+        check()
+    </script>
+</body>
+
+</html>

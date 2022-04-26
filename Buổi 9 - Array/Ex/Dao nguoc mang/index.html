@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script>
+        var arr = []
+        function input() {
+            let n = parseInt(prompt("Nhap vao so luong phan tu trong mang!"))
+            for (let i = 0; i < n; i++) {
+                arr[i] = parseInt(prompt("Nhap vao phan tu thu " + i))
+            }
+        }
+        input()
+        var first = 0;
+        var last = arr.length - 1
+        console.log(arr);
+        
+        function swap(first, last) {
+            let temp;
+            temp = arr[first]
+            arr[first] = arr[last]
+            arr[last] = temp;
+        }
+        function reverse(arr) {
+            while (last > first) {
+                swap(first, last);
+                first++;
+                last--;
+            }
+        }
+        reverse()
+        console.log(arr);
+    </script> -->
+    <script>
+        var a = []
+        var b = []
+        var c = []
+        var n
+        function inputArray() {
+            do {
+                n = parseInt(prompt("Nhap vao so luong phan tu trong mang!"))
+            } while (n < 0)
+            for (let i = 0; i < n; i++) {
+                a[i] = parseInt(prompt("a[" + i + "] = "))
+            }
+        }
+        // function reverseArray() {
+        //     let temp
+        //     let i = 0
+        //     let j = n-1
+        //     while(i<j){
+        //         temp = a[i]
+        //         a[i] = a[j]
+        //         a[j] = temp
+        //         i++
+        //         j--
+        //     }
+        // }
+        function reverseArray2() {
+            for (let i = n-1; i >= 0; i--) {
+                b.push(a[i])
+            }
+        }
+        function reverseArray3() {
+            for (let i = 0; i <n; i++) {
+                c.unshift(a[i])
+            }
+        }
+        inputArray()
+        console.log(a);
+        // reverseArray()
+        reverseArray2()
+        reverseArray3()
+        console.log(b);
+        console.log(c);
+    </script>
+
+</body>
+
+</html>

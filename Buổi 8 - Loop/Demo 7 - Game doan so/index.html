@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Doan So</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <button id="play" onclick="check()">Play</button>
+</body>
+<script>
+    function check() {
+        let min = parseInt(prompt("Nhap vao khoang min"))
+        let max = parseInt(prompt("Nhap vao khoang max"))
+        let a
+        let n
+        let c = (max - min)+1;
+        for (let i = 0; i < 4; i++) {
+            if (i == 3) {
+                break
+            }
+            a = Math.floor(Math.random() * c) + min;
+            do {
+                console.log("===================");
+                n = prompt("Nhap vao so tu "+min+" -> "+max)
+            } while (n < min || n > max || n == " " || n == "")
+            if (a == n) {
+                console.log("Ban doan dung roi!")
+                console.log("So ngau nhien la " + a)
+                break
+            } else {
+                console.log("Ban doan sai roi!")
+                console.log("So ngau nhien la " + a)
+            }
+        }
+        console.log("Hết lượt rồi!")
+    }
+</script>
+
+</html>

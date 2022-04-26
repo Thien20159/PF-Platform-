@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>So Dao Nguoc</title>
+</head>
+
+<body>
+    <script>
+        function check() {
+            let input
+            let temp
+            let reverse = 0;
+            do {
+                input = parseInt(prompt("Nhap so"))
+            } while (input < 0 || input == "" || input == " ")
+            while (input != 0) {
+                temp = parseInt(input % 10);
+                reverse = parseInt(reverse * 10 + temp);
+                input = parseInt(input / 10);
+                console.log(reverse);
+            }
+        }
+        check()
+    </script>
+</body>
+
+</html>

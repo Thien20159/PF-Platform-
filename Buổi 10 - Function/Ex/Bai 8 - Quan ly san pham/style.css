@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin-left: 30px;
+    background: linear-gradient(to right, white, rgb(154, 213, 246));
+}
+/* CONTAINER INPUT ADD */
+/* =================== */
+h3{
+    margin-top: 20px;
+}
+.container-input{
+    margin-top: 16px;
+    display: flex;
+    flex-direction: row;
+    width: 233px;
+    height: 33px;
+    padding: 19px;
+    background: rgb(235 235 235);
+    border-radius: 2px;
+}
+.container-input input{
+    margin-right: 20px;
+    border: 1px solid rgb(207, 207, 207);
+    border-radius: 3px;
+}
+#input::placeholder{
+    font-size: 12px;
+}
+#input{
+    padding-left: 15px;
+}
+
+.container-input button{
+    cursor: pointer;
+    background: rgb(14 205 14);
+    border: 1px solid rgb(14 205 14);
+    color: white;
+    border-radius: 2px;
+    width: 35px;
+    height: 32px;
+}
+/* CONTAINER DISPLAY LIST */
+/* ====================== */
+.name-list{
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0px;
+}
+.container-display-list{
+    display: flex;
+    flex-direction: column;
+}
+#h3-display{
+    margin-bottom: 20px;
+}
+#name-product{
+    font-weight: bold;
+}
+#quantity-list{
+    font-weight: bold;
+    margin-left: 470px;
+    color:red;
+}
+/* Result */
+/* ======================= */
+.result{
+    display: flex;
+    flex-direction: row;
+}
+#container-result{
+    margin-top: 10px;
+    width: 250px;
+    height: 30px;
+    display: flex;
+    font-weight: 520;
+    flex-direction: column;
+}
+#container-result p{
+    height: 22px;
+    width: 50px;
+    margin-bottom: 12px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+#edit{
+    margin-top: 10px;
+    width: 200px;
+    height: 30px;
+    display: flex;
+    font-weight: 520;
+    flex-direction: column;
+}
+#edit button{
+    cursor: pointer;
+    background: rgb(14 205 14);
+    border: 1px solid rgb(14 205 14);
+    color: white;
+    border-radius: 2px;
+    height: 22px;
+    width: 50px;
+    margin-bottom: 10px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+#delete{
+    margin-top: 10px;
+    width: 200px;
+    height: 30px;
+    display: flex;
+    font-weight: 520;
+    flex-direction: column;
+}
+#delete button{
+    cursor: pointer;
+    background: rgb(14 205 14);
+    border: 1px solid rgb(14 205 14);
+    color: white;
+    border-radius: 2px;
+    height: 22px;
+    width: 60px;
+    margin-bottom: 10px;
+    font-size: 17px;
+    font-weight: 500;
+}

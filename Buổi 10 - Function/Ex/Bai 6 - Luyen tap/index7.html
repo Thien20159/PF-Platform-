@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = parseInt(prompt("Nhap vao so thu 1"))
+        let b = parseInt(prompt("Nhap vao so thu 2"))
+        let c = parseInt(prompt("Nhap vao so thu 3"))
+
+        function checkMin(a, b, c) {
+            let min = a
+            if (min > b || min > c) {
+                if (min > b) {
+                    min = b
+                } else {
+                    min = c
+                }
+            }
+            return min
+        }
+        console.log("Min = "+checkMin(a, b, c));
+    </script>
+</body>
+
+</html>

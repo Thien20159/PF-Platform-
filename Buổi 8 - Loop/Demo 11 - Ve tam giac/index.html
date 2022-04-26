@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let n = parseInt(prompt("Nhap vao so canh: "))
+        
+        let a = ''
+        for (i = 1; i <= n; i++) {
+            for (j = 1; j <= i; j++) {
+                a = a + "*"
+            }
+            a = a + "<br>"
+        }
+        document.write(a)
+        document.write("<br>")
+
+        let b = ''
+        for (i = n; i > 0; i--) {
+            for (j = i - 1; j > 0; j--) {
+                b += "*"
+            }
+            b += "<br>"
+        }
+        document.write(b)
+        document.write("<br>")
+
+        let c = ''
+
+        for (i = 1; i <= n; i++) {
+            for (j = 1; j <= n; j++) {
+                if (i + j > n) {
+                    document.write("*")
+                }
+                else {
+                    document.write("&nbsp;&nbsp;")
+                }
+            }
+            document.write("<br>")
+        }
+        document.write("<br>")
+        for (i = 1; i <= n; i++) {
+            for (j = 1; j <= n; j++) {
+                if (j>=i) {
+                    document.write("*")
+                }
+                else {
+                    document.write("&nbsp;&nbsp;")
+                }
+            }
+            document.write("<br>")
+        }
+
+    </script>
+</body>
+
+</html>

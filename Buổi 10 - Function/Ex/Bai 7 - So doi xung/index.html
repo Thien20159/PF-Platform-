@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script>
+        let a = []
+        let n = 10
+        function inputArray() {
+            for (let i = 0; i < n; i++) {
+                a[i] = parseInt(prompt("a[" + i + "] = "))
+            }
+        }
+        inputArray()
+        console.log(a)
+        isPalindrome(a)
+        function isPalindrome(s) {
+            let firstArray = 0
+            let lastArray = n - 1
+            let count = 0
+            while (lastArray > firstArray) {
+                if (s[firstArray] == s[lastArray]) {
+                    count++
+                }
+                firstArray++
+                lastArray--
+            }
+            if (count > n / 2 - 1) {
+                console.log("La mang doi xung")
+            } else {
+                console.log("Khong la mang doi xung");
+            }
+        }
+    </script> -->
+    <script>
+
+        // let str = "Học JavaScript hay Web?";
+
+        // // Sử dụng split() để tách chuỗi -> từ
+        // let substrings = str.split(" ");
+
+        // console.log(substrings);
+        // console.log(str);
+
+        function isPalindrome(string) {
+            let a = string.split("");
+            console.log(a)
+            if (a.length < 2) {
+                return true
+            }
+            else {
+                if (a[0] == a[a.length - 1]) {
+                    a.shift()
+                    a.pop()
+                    isPalindrome(a);
+                }else{
+                    return false;
+                }
+            }
+            return false
+        }
+        let string1 = prompt("Nhap vao chuoi bat ky: ")
+        console.log(isPalindrome(string1));
+    </script>
+</body>
+
+</html>

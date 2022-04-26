@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const pi = 3.14
+        let bk = parseFloat(prompt("Nhap vao ban kinh!"))
+        function acreage(x){
+            return Math.pow(x, 2) * pi
+        }
+        function perimeter(x){
+            return 2*pi*x
+        }
+        console.log("Ban kinh = "+bk);
+        console.log("Dien tich hinh tron = "+acreage(bk));
+        console.log("Chu vi hinh tron = "+parseInt(perimeter(bk)));
+    </script>
+</body>
+</html>

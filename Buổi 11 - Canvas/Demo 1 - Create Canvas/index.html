@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="_pexcanvas" width="200" height="100" style="border:1px solid #000000;">
+
+    </canvas>
+    <script>
+        // var canvas = document.getElementById('myCanvas')
+        // var context = canvas.getContext("2d")
+        // context.move(0, 0)
+        // context.line(0, 100)
+        
+        // context.lineWidth = 10;
+        // context.strokeStyle = 'red';
+
+        // let canvas = document.getElementById("myCanvas");
+        // let ctx = canvas.getContext("2d");
+        // ctx.beginPath();
+        // ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+        // ctx.stroke();
+
+        // let canvas = document.getElementById("myCanvas");
+        // let ctx = canvas.getContext("2d");
+        // ctx.fillStyle = "#FF0000";
+        // ctx.fillRect(25, 10, 150, 80);
+
+        // let canvas = document.getElementById("myCanvas");
+        // let ctx = canvas.getContext("2d");
+        // ctx.font = "30px Arial";
+        // ctx.fillText("Hello World", 20, 60);
+        let _pexcanvas = document.getElementById('_pexcanvas')
+        var ctx = _pexcanvas.getContext("2d");
+        var d = 20; //The Size of the hearting
+        var k =150; // The Position of the heart
+        ctx.moveTo(k, k + d / 4);
+        ctx.quadraticCurveTo(k, k, k + d / 4, k);
+        ctx.quadraticCurveTo(k + d / 2, k, k + d / 2, k + d / 4);
+        ctx.quadraticCurveTo(k + d / 2, k, k + d * 3/4, k);
+        ctx.quadraticCurveTo(k + d, k, k + d, k + d / 4);
+        ctx.quadraticCurveTo(k + d, k + d / 2, k + d * 3/4, k + d * 3/4);
+        ctx.lineTo(k + d / 2, k + d);
+        ctx.lineTo(k + d / 4, k + d * 3/4);
+        ctx.quadraticCurveTo(k, k + d / 2, k, k + d / 4);
+        
+    </script>
+</body>
+
+</html>

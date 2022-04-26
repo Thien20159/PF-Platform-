@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"]
+        console.log(a);
+        let b = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
+        console.log(b);
+        let inputStr
+        function input(){
+            inputStr = prompt("Nhap vao ten sao!")
+        }
+
+        function check(x) {
+            let count = 0;
+            for (let i = 0; i < a.length; i++) {
+                if (a[i] == x) {
+                    console.log("Tim thay tai vi tri: "+i);
+                }
+                else {
+                    count++
+                }
+            }
+            if (count > 6) {
+                console.log("Khong tim thay!");
+            }
+        }
+        input()
+        check(inputStr)
+    </script>
+</body>
+
+</html>

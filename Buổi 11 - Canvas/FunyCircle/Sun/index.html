@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sun</title>
+</head>
+
+<body>
+    <canvas id="screen" width="1520" height="706" style="border: 1px solid blue;"></canvas>
+    <script>
+        var canvas = document.getElementById('screen')
+        var ctx = canvas.getContext('2d')
+        var objSun = new circle(760, 353, 60)
+
+        function circle(x, y, radius) {
+            this.x = x
+            this.y = y
+            this.radius = radius
+        }
+    
+        function drawSun() {
+            ctx.beginPath()
+            ctx.arc(objSun.x, objSun.y, objSun.radius, 0, 2 * Math.PI);
+            var gardient = ctx.createRadialGradient(760,353, 60, 760, 353, 5+15)
+            gardient.addColorStop(0, '#f7ff00');
+            // gardient.addColorStop(0.3, '#FFC371');  
+            gardient.addColorStop(0.3, 'orange');
+            // gardient.addColorStop(0.7, '#FF5F6D');
+            gardient.addColorStop(1, 'red');
+            ctx.fillStyle = gardient
+            // ctx.rotate();
+            ctx.fill();
+            
+            //Sao Thuy
+            ctx.beginPath()
+            ctx.arc(objSun.x, objSun.y, objSun.radius+120 , 0, 2 * Math.PI);
+            ctx.stroke()
+            ctx.beginPath()
+            ctx.arc(objSun.x + 180, objSun.y, objSun.radius-30, 0, 2 * Math.PI);
+            ctx.fillStyle = "cyan"
+            ctx.fill();
+            // Sao Kim
+            ctx.beginPath()
+            ctx.arc(objSun.x, objSun.y, objSun.radius+240 , 0, 2 * Math.PI);
+            ctx.stroke()
+            // Trai Dat
+            ctx.beginPath()
+            ctx.arc(objSun.x, objSun.y, objSun.radius+360 , 0, 2 * Math.PI);
+            ctx.stroke()
+        }
+
+        drawSun()
+
+    </script>
+</body>
+
+</html>

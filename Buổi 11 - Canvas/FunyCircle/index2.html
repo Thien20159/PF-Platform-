@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <canvas id="myCanvas" width="1520" height="706"></canvas>
+</body>
+
+</html>
+<script>
+    // **********************************//
+    createMultipleCircle()
+    // **********************************//
+
+    function circle(x, y, radius) {
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+    }
+    function getRandomHex() {
+        return Math.floor(Math.random() * 255);
+    }
+    function createCircle() {
+        var canvas = document.getElementById('myCanvas')
+        var context = canvas.getContext('2d')
+        var radius = Math.floor(Math.random() * 99 + 8)
+        var x = Math.floor(Math.random() * 1519 + 1)
+        var y = Math.floor(Math.random() * 705 + 1)
+        var circleObj = new circle(x, y, radius)
+        var red = getRandomHex()
+        var green = getRandomHex()
+        var blue = getRandomHex()
+        var color = "rgb(" + red + "," + blue + "," + green + ")"
+
+
+        context.beginPath();
+        context.arc(circleObj.x, circleObj.y, circleObj.radius, 0, 2 * Math.PI)
+
+        // context.stroke()
+        context.fillStyle = color
+        context.fill()
+    }
+    function createMultipleCircle() {
+        for (var i = 0; i < 70; i++) {
+            createCircle();
+        }
+    }
+
+
+</script>

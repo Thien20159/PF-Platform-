@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Enter value" onkeyup="modifyInput(this)">
+    <br>
+    <br>
+    <button onclick="pop()">Pop</button>
+    <button onclick="push()">Push</button>
+    <button onclick="shift()">Shift</button>
+    <button onclick="unshift()">Unshift</button>
+    <button onclick="reverse()">Reverse</button>
+    <button onclick="sort()">Sort</button>
+    <button onclick="display()">Display</button>
+    <br>
+    <br>
+    <span id="result"></span>
+    <script>
+        let arr = []
+        let numberInput
+        let result = document.getElementById('result')
+        function modifyInput(obj){
+            numberInput = parseFloat(obj.value)
+        }
+        function pop(){
+            if(arr.length>0){
+                arr.pop();
+            }
+        }
+        function shift(){
+            if(arr.length>0){
+                arr.shift();
+            }
+        }
+        function push(){
+            arr.push(numberInput)
+        }
+        function unshift(){
+            arr.unshift(numberInput)
+        }
+        function reverse(){
+            arr.reverse()
+        }
+        function sort(){
+            arr.sort()
+        }
+        function display(){
+            result.innerText = arr.join(" - ")
+        }
+    </script>
+</body>
+</html>

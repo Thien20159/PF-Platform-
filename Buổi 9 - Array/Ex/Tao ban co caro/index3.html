@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Style>
+        .container {
+            text-align: center;
+        }
+    </Style>
+
+</head>
+
+<body>
+    <div class="container" id="contentContainer">
+        <h1>CARO</h1>
+        <div id="display"></div>
+    </div>
+    <script>
+        var n = 5
+        var quantity = 1
+        var str = ""
+        var contentContainer
+        var button
+        var a = []
+        var b
+        inputArray()
+        function inputArray() {
+            for (let i = 0; i < n; i++) {
+                a.push([])
+                for (var j = 0; j < n; j++) {
+                    a[i].push(append())
+                }
+                // a += "\n"
+            }
+        }
+
+
+        function append() {
+            contentContainer = document.getElementById('contentContainer')
+            button = document.createElement('button')
+            button.innerText = 0 + quantity
+            contentContainer.appendChild(button)
+            quantity++
+        }
+        console.log(a);
+    </script>
+
+</body>
+
+</html>

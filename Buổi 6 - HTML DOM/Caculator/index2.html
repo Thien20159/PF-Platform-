@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Caculator</title>
+</head>
+<body>
+    <div class="container-input">
+        <input type="number" name="inputFirst" placeholder="Enter the first number" 
+        onchange="modifyInput('firstNumber', this)">
+        <input type="number" name="inputSecond" placeholder="Enter the second number" 
+        onchange="modifyInput('secondNumber', this)">
+    </div>
+    <div class="container-button">
+        <button onclick="caculate('add')">Addition(+)</button>
+        <button onclick="caculate('sub')">Subtration(-)</button>
+        <button onclick="caculate('mul')">Multiplication(*)</button>
+        <button onclick="caculate('div')">Division(/)</button>
+    </div>
+    <div id="result"></div>
+    <!-- JS -->
+    
+    <!-- <script>
+        let firstNumber, secondNumber;
+        let result = document.getElementById('result');
+        // Xu ly su kien input
+        function modifyInput(name, obj){
+            switch (name) {
+                case 'firstNumber':
+                    firstNumber = parseFloat(obj.value);
+                    break;
+                case 'secondNumber':
+                    secondNumber = parseFloat(obj.value);
+                default:
+                    break;
+            }
+            console.log(name, obj.value);
+        }
+        // Xu ly su kien button
+        function caculate(method){
+            switch (method) {
+                case 'add':
+                    result.innerText = "Add = " + (firstNumber + secondNumber);
+                    break;
+                case 'sub':
+                    result.innerText = "Sub = " + (firstNumber - secondNumber);
+                    break;
+                case 'mul':
+                    result.innerText = "Mul = " + (firstNumber * secondNumber);
+                    break;
+                case 'div':
+                    result.innerText = "Div = " + (firstNumber / secondNumber);
+                    break;
+                default:
+                    break;
+            }
+        }
+
+    </script> -->
+    <script>
+        // debugger
+        let firstNumber, secondNumber;
+        let result = document.getElementById('result');
+        function modifyInput(name, obj){
+            switch (name) {
+                case 'firstNumber':
+                    firstNumber = parseFloat(obj.value);
+                    break;
+                case 'secondNumber':
+                    secondNumber = parseFloat(obj.value);
+                    break;
+                default:
+                    break;
+            }
+            console.log(name, obj.value);
+        }
+        function caculate(method){
+            switch (method){
+                case 'add':
+                    result.innerText = (firstNumber + secondNumber);
+                    break;
+                case 'sub':
+                    result.innerText = (firstNumber - secondNumber);
+                    break;
+                case 'mul':
+                    result.innerText = (firstNumber * secondNumber);
+                    break;
+                case 'div':
+                    result.innerText = (firstNumber / secondNumber);
+                    break;
+                default:
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

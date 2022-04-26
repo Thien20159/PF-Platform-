@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = []
+        var n = prompt("Nhap vao do dai mang!")
+        for(let i = 0; i < n; i++){
+            do{
+                arr[i] = parseInt(prompt("Nhap vao gia tri thu "+ i))
+            }while(arr[i]==""||arr[i]==" ")
+            // console.log(arr[i]);
+        }
+        console.log(arr);
+
+        var d = parseInt(prompt("Nhap vao so doan"))
+        for(let j = 0;j<arr.length;j++){
+            if(arr[j]==d){
+                console.log("Tim thay tai vi tri "+j);
+            }
+        }
+    </script>
+</body>
+</html>

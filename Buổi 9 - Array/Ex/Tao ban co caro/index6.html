@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="row mx-auto row-flex d-none text-center py-5" id="gameContainer" style="width:100rem;">
+        <h1>CỜ CARO</h1>
+        <div class="col-8">
+            <div class="card my-3 mx-auto h-100">
+                <div class="card-header text-center py-2">
+                    <h3>Lượt chơi thứ:
+                        <span id="luotChoi">0</span>
+                        <span id="count" class="d-none">0</span>
+                    </h3>
+                </div>
+                <div class="card-body text-center" id="hienThi" style="font-family:'Courier New', Courier, monospace;">
+                </div>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="card my-3 mx-auto h-100">
+                <div class="card-header text-center py-2">
+                    <h3>Player A</h3>
+                </div>
+                <div class="card-body" id="playerX" style="font-family:'Courier New', Courier, monospace;">
+                </div>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="card my-3 mx-auto h-100">
+                <div class="card-header text-center py-2">
+                    <h3 id="mode">Loading...</h3>
+                </div>
+                <div class="card-body" id="playerO" style="font-family:'Courier New', Courier, monospace;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="thongBao" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="titleThongBao"></h5>
+                </div>
+                <div class="modal-body text-center">
+                    <p id="textThongBao">Đội XO thắng</p>
+                </div>
+                <div class="modal-footer d-none" id="popupBtn">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="button" class="btn btn-primary"
+                        onclick="window.location.href = window.location.href">Chơi tiếp</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-none" id="gameModeSelector">
+        <div class="row row-flex m-auto">
+            <div class="col">
+                <div class="card">
+                    <a class="button" style="cursor: pointer;" onclick="modeSelect('vsP')" data-bs-dismiss="modal">
+                        <div class="card-body h-100 text-center">
+                            <h1>NGƯỜI<br />vs<br />NGƯỜI</h1>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <a class="button" style="cursor: pointer;" onclick="modeSelect('vsC')" data-bs-dismiss="modal">
+                        <div class="card-body h-100 text-center">
+                            <h1>NGƯỜI<br />vs<br />MÁY</h1>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var luotChoi = document.getElementById('luotChoi');
+        var count = document.getElementById('count');
+        var hienThi = document.getElementById('hienThi');
+        var playerX = document.getElementById('playerX');
+        var playerO = document.getElementById('playerO');
+        var titleThongBao = document.getElementById('titleThongBao');
+        var textThongBao = document.getElementById('textThongBao');
+        var gameModeSelector = document.getElementById('gameModeSelector');
+        var mode = document.getElementById('mode');
+        var popupBtn = document.getElementById('popupBtn');
+        var gameContainer = document.getElementById('gameContainer');
+        var thongBao = new bootstrap.Modal(document.getElementById("thongBao"), {});
+        var quantity = 10;
+        var banCo = [];
+        titleThongBao.innerHTML = 'Chọn chế độ chơi';
+        textThongBao.innerHTML = gameModeSelector.innerHTML;
+        thongBao.show();
+
+        function modeSelect(params) {
+            /*-----------------------------------------------------------------
+            Chọn chế độ chơi với người hay chơi với máy
+            -------------------------------------------------------------------*/
+            mode.innerText = (params == 'vsC') ? 'Computer' : 'Player B';
+            hienThi.innerHTML = inBanCo(resetBanCo(quantity));
+            gameContainer.classList.remove('d-none');
+        }
+        function inBanCo(obj) {
+            /*-----------------------------------------------------------------
+            Hàm này xuát biến bàn cờ hiển thị ra màn hình người chơi
+            -------------------------------------------------------------------*/
+            let str = '<h1>';
+            for (let row = 0; row < banCo.length; row++) {
+                for (let col = 0; col < banCo[row].length; col++) {
+                    str += '<a class="pointer" onclick="doAction(' + row + ',' + col + ')" role="button">';
+                    str += banCo[row][col];
+                    str += '</a>&nbsp;';
+                }
+                str += '<br/>';
+            }
+            str += '</h1>'
+            return str;
+        }
+</script>
+
+</html>

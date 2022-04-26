@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splice</title>
+</head>
+
+<body>
+    <script>
+        var arr = [1, 2, 3, 4, 5]
+        console.log(arr);
+        arr.splice(1, 1);
+        
+        // splice(index bắt đầu, số lượng cần xóa)
+        console.log(arr);
+        var students = [
+            {
+                id: 1,
+                name: "Nguyen Van A",
+                class: "10A3"
+            },
+            {
+                id: 2,
+                name: "Nguyen Van B",
+                class: "11A2"
+            },
+            {
+                id: 3,
+                name: "Nguyen Van C",
+                class: "12A10"
+            },
+        ]
+        console.log(students);
+        // students.splice(1,1)
+        // console.log(students);
+        //or
+        for (let i = 0;i<students.length;i++){
+            if(students[i].id == 3){
+                students.splice(i, 1);
+            }
+        }
+        console.log(students);
+    </script>
+</body>
+
+</html>

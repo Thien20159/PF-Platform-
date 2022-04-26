@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declare Array</title>
+</head>
+
+<body>
+    <script>
+        var n
+        function input() {
+            do {
+                n = parseInt(prompt("Nhap vao so luong mang!"))
+            } while (n < 0 || n == "" || n == " ")
+
+        }
+        // Mang 1 chieu
+        function inputArray(n, a) {
+            for (let i = 0; i < n; i++) {
+                a[i] = (parseInt(Math.random() * 10))
+            }
+        }
+        function findMaxMin(n, a) {
+            max = a[0]
+            min = a[0]
+            for (let i = 0; i < n; i++) {
+                if (a[i] > max) {
+                    max = a[i]
+                }
+                if (a[i] < min) {
+                    min = a[i]
+                }
+            }
+        }
+        //Mang da chieu
+        function inputArrayMulti(b, n) {
+            for (let i = 0; i < n; i++) {
+                b.push([])
+                for (let j = 0; j < n; j++) {
+                    b[i].push(parseInt(Math.random() * 10))
+                }
+            }
+        }
+        function findMaxMinArrMulti(b, n) {
+            maxMulti = b[0][0]
+            minMulti = b[0][0]
+            for (let i = 0; i < n; i++) {
+                for (let j = 0; j < n; j++) {
+                    if (b[i][j] > maxMulti) {
+                        maxMulti = b[i][j]
+                    }
+                    if (b[i][j] < minMulti) {
+                        minMulti = b[i][j]
+                    }
+                }
+            }
+        }
+        function interchangeSort(a, n) {
+            var temp
+            for (let i = 0; i < n - 1; i++) {
+                for (let j = i + 1; j < n; j++) {
+                    if (a[i] > a[j]) {
+                        temp = a[i]
+                        a[i] = a[j]
+                        a[j] = temp
+                    }
+                }
+            }
+            return a
+        }
+        function interchangeSortMulti(b, n) {
+            var temp
+            for (var i = 0; i < n; i++) {
+                for (var j = 0; j < b[i].length; j++) {
+                    for (var k = i; k < n; k++) {
+                        for (var p = j + 1; p < b[k].length; p++) {
+                            if (b[i][j] > b[k][p]) {
+                                temp = b[i][j]
+                                b[i][j] = b[k][p]
+                                b[k][p] = temp
+                            }
+                        }
+                    }
+                }
+            }
+            return b
+        }
+        // function searchArray(n, a, x) {
+        //     for (let i = 0; i < n; i++) {
+        //         if (a[i] == x) {
+        //             console.log("Tim thay tai vi tri: " + i);
+        //         }
+        //     }
+        // }
+        // function searchBinary(n, a, x) {
+        //     var mid = (right + left) / 2
+        //     var left = 0
+        //     var right = n - 1
+        //     while (right => left) {
+        //         if (x == a[mid]) {
+        //             console.log("Da tim thay tai vi tri" + i)
+        //             break
+        //             if (x >= a[mid]) {
+        //                 left = mid + 1
+        //                 mid = (left + right) / 2
+        //             }
+        //             else if (x <= a[mid]) {
+        //                 right = mid - 1
+        //                 mid = (left + right) / 2
+        //             }
+        //         }
+        //     }
+        // }
+        function sumMultiArray(b, n) {
+            total2 = 0;
+            for (let i = 0; i < n; i++) {
+                for (let j = 0; j < n; j++) {
+                    total2 += b[i][j]
+                }
+            }
+            return total2
+        }
+        function sumArray(a, n) {
+            total1 = 0
+            for (let i = 0; i < n; i++) {
+                total1 += a[i]
+            }
+        }
+        input()
+        var a = []
+        var b = []
+        var maxMulti
+        var minMulti
+        var max
+        var min
+        var x = parseInt(prompt("Nhap vao x"))
+        var total2
+        var total1
+        inputArray(n, a)
+        inputArrayMulti(b, n)
+        console.log(a)
+        console.log(b)
+        findMaxMin(n, a)
+        findMaxMinArrMulti(b, n)
+        interchangeSort(a, n)
+        interchangeSortMulti(b, n)
+        sumMultiArray(b, n)
+        sumArray(a, n)
+        console.log(a)
+        console.log(b)
+        console.log("total1 = " + total1)
+        console.log("total2 = " + total2)
+
+        console.log("Max  = " + max)
+        console.log("Min  = " + min)
+        console.log("Max Multi = " + maxMulti)
+        console.log("Min Multi = " + minMulti)
+
+        // searchArray(n, a, x)
+        // searchBinary(n, a, x) 
+    </script>
+
+
+</body>
+
+</html>

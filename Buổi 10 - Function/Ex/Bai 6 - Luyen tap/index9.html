@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = []
+        var n = 5
+        function input() {
+            for (let i = 0; i < n; i++) {
+                a[i] = parseInt(prompt("a[" + i + "] = "))
+            }
+        }
+        input()
+        console.log(a);
+        reverse(a)
+        function reverse(a) {
+            let temp
+            let i = 0
+            let j = n - 1
+            while (i < j) {
+                temp = a[i]
+                a[i] = a[j]
+                a[j] = temp
+                i++
+                j--
+            }
+            console.log(a);
+        }
+
+    </script>
+</body>
+
+</html>

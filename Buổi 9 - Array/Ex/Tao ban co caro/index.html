@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <h2>Caro</h2>
+    <button onclick="change()">Change</button>
+    <button onclick="changeBot()">Change Bot</button>
+    <script>
+        const colorize = (...args) => ({
+            black: `\x1b[30m${args.join(' ')}`,
+            red: `\x1b[31m${args.join(' ')}`,
+            green: `\x1b[32m${args.join(' ')}`,
+            yellow: `\x1b[33m${args.join(' ')}`,
+            blue: `\x1b[34m${args.join(' ')}`,
+            magenta: `\x1b[35m${args.join(' ')}`,
+            cyan: `\x1b[36m${args.join(' ')}`,
+            white: `\x1b[37m${args.join(' ')}`,
+            bgBlack: `\x1b[40m${args.join(' ')}\x1b[0m`,
+            bgRed: `\x1b[41m${args.join(' ')}\x1b[0m`,
+            bgGreen: `\x1b[42m${args.join(' ')}\x1b[0m`,
+            bgYellow: `\x1b[43m${args.join(' ')}\x1b[0m`,
+            bgBlue: `\x1b[44m${args.join(' ')}\x1b[0m`,
+            bgMagenta: `\x1b[45m${args.join(' ')}\x1b[0m`,
+            bgCyan: `\x1b[46m${args.join(' ')}\x1b[0m`,
+            bgWhite: `\x1b[47m${args.join(' ')}\x1b[0m`
+        })
+
+        var arr = []
+        var n
+        function input() {
+            do {
+                n = parseInt(prompt("Nhap vao so luong trong ban co!"))
+            } while (n < 1)
+            for (let i = 0; i < n; i++) {
+                arr.push([])
+                for (let j = 0; j < n; j++) {
+                    arr[i].push("0")
+                }
+            }
+        }
+        
+        function change() {
+            row = parseInt(prompt("X!"))
+            col = parseInt(prompt("Y"))
+            arr[row][col] = (colorize("x").bgCyan)
+            display()
+        }
+        var rb
+        var cb
+        var str = ""
+        var b = []
+        var c = []
+        function changeBot() {
+            do {
+                rb = parseInt(Math.random() * (n - 1))
+                cb = parseInt(Math.random() * (n - 1))
+            } while (rb == row || cb == col)
+
+            
+            arr[rb][cb] = (colorize("x").bgBlue)
+            b.push(rb)
+            c.push(cb)
+            // console.log("Chon Lai");
+            display()
+            check()
+        }
+
+        function check(){
+            if(b[rb] == rb && c[cb] == cb){
+                changeBot()
+            }
+            b.pop()
+            c.pop()
+            // console.log("b = "+b);
+            // console.log("rb"+rb);
+            // console.log("c = "+c);
+            // console.log("cb" +cb);
+        }
+
+        function display() {
+            let displayContent = ""
+            for (let i = 0; i < n; i++) {
+                for (let j = 0; j < n; j++) {
+                    displayContent += arr[i][j] + "\t"
+                }
+                displayContent += "\n"
+            }
+            console.log("================");
+            console.log(displayContent)
+        }
+        input()
+        change()
+        changeBot()
+        check()
+        display()
+        // console.log(arr);
+    </script> -->
+
+</body>
+
+</html>

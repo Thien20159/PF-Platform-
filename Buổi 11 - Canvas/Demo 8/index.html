@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <canvas id="canvas1" width="1000" height="700" style="border: 1px solid red;"></canvas> -->
+    <img id="image-ayaka" src="./img/ayaka.png" alt="ayaka" width="100px" height="200px">
+    <canvas id="canvas" width="750px" height="1200px" style="border: 1px solid red;"></canvas>
+    <button onclick="myCanvas()">Click Me!</button>
+    <!-- <script>
+        var canvas = document.getElementById('canvas')
+        var ctx = canvas.getContext('2d')
+        ctx.beginPath()
+        ctx.fillStyle = "red"
+        // ctx.fillRect(1, 1, 100, 100)
+        var y = 40, h = 300, w = 260;
+        for (var x = 10; x != 140; x = x + 10) {
+            ctx.fillRect(x, y, h, w);
+            ctx.clearRect(x + 5, y + 5, h - 10, w - 10);
+            y = y + 10;
+            h = h - 20;
+            w = w - 20;
+        }  
+
+        ctx.stroke()
+    </script> -->
+    <script>
+        function myCanvas(){
+            var canvas = document.getElementById('canvas')
+            var img = document.getElementById('image-ayaka')
+            var ctx = canvas.getContext('2d')
+            ctx.drawImage(img, 0,0  )
+            ctx.stroke()
+        }
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Caro</h1>
+        <div id="result"></div>
+        <br>
+        <button onclick="change1()">Change 1</button>
+        <button onclick="change2()">Change 2</button>
+    </div>
+    <script>
+        var arr = []
+        var n = 5;
+        input()
+        // change()
+        display()
+
+        function input() {
+            for (let i = 0; i < n; i++) {
+                arr.push([])
+                for (var j = 0; j < n; j++) {
+                    arr[i].push('0')
+                }
+            }
+        }
+        function change1() {
+            do {
+                var row = parseInt(prompt("X!"))
+                var col = parseInt(prompt("Y!"))
+            } while (row > n - 1 || col > n - 1)
+            arr[row][col] = ("x")
+            display()
+        }
+        function change2() {
+            do {
+                var row = parseInt(prompt("X!"))
+                var col = parseInt(prompt("Y!"))
+            } while (row > n - 1 || col > n - 1)
+            arr[row][col] = ("y")
+            display()
+        }
+        function display() {
+            var str = ""
+            for (let i = 0; i < n; i++) {
+                for (let j = 0; j < n; j++) {
+                    str += arr[i][j] + "\t"
+
+                }
+                str += "\n"
+            }
+            document.getElementById('result').innerText = str
+        }
+    </script>
+</body>
+
+</html>

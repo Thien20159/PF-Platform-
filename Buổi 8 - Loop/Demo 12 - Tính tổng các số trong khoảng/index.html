@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính tổng các số trong khoảng</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    var sum = 0;
+    do {
+        var a = parseInt(prompt("Nhap vao a(min): "))
+        var b = parseInt(prompt("Nhap vao b(max): "))
+    }while(a>b||a==b||a==""||b=="");
+    for(let i = a; i <= b; i++) sum += i;
+    console.log("Tong tu " + a + " den " + b + " = " + sum);
+
+</script>

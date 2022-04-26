@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <canvas id="DemoCanvas" width="500" height="200"></canvas>
+    <script>
+        var canvas = document.getElementById('DemoCanvas');
+        if (canvas.getContext) {
+            var context = canvas.getContext('2d');
+            // Reset the current path
+            context.beginPath();
+            // Staring point (10,45)
+            context.moveTo(10, 45);
+            // End point (180,47)
+            context.lineTo(180, 47);
+            // Make the line visible
+            context.stroke();
+        }
+    </script> -->
+
+    <!-- <canvas id="DemoCanvas" width="200" height="200"></canvas>
+    <script>
+        var canvas = document.getElementById('DemoCanvas');
+        if (canvas.getContext) {
+            var ctx = canvas.getContext("2d");
+            for (i = 10; i < 100; i += 10) {
+                ctx.moveTo(0, i);
+                ctx.lineTo(canvas.width, i);
+                ctx.stroke();
+            }
+            for (i = 10; i < 200; i += 10) {
+                ctx.moveTo(i, 0);
+                ctx.lineTo(i, canvas.width / 2);
+                ctx.stroke();
+            }
+        } 
+    </script> -->
+
+    <!-- <canvas id="DemoCanvas" width="1000" height="400"></canvas>
+    <script>
+        var canvas = document.getElementById('DemoCanvas');
+        var count = 1;
+        if (canvas.getContext) {
+            var ctx = canvas.getContext("2d");
+            var count = 1;
+            for (i = 0; i < 360; i += 30) {
+                ctx.beginPath();
+                ctx.lineWidth = count;
+                ctx.moveTo(0, i);
+                ctx.lineTo(canvas.width, i);
+                ctx.stroke();
+                count++;
+            }
+        } 
+    </script> -->
+    <!-- Màu sắc của đường thẳng -->
+
+    <canvas id="DemoCanvas" width="400" height="400"></canvas>
+    <script>
+        var canvas = document.getElementById('DemoCanvas');
+        if (canvas.getContext) {
+            var context = canvas.getContext("2d");
+            // context.beginPath();
+            context.moveTo(50, 10);
+            context.lineTo(50, 200);
+            context.lineWidth = 5;
+            // set line color
+            context.strokeStyle = 'red';
+
+            
+            context.stroke();
+            context.beginPath();
+            context.moveTo(100, 10);
+            context.lineTo(100, 200);
+            context.lineWidth = 5;
+            // set line color
+            context.strokeStyle = 'green';
+            context.stroke();
+            context.beginPath();
+            context.moveTo(150, 10);
+            context.lineTo(150, 200);
+            context.lineWidth = 5;
+            // set line color
+            context.strokeStyle = '#2E1919';
+            context.stroke();
+            context.stroke();
+            context.beginPath();
+            context.moveTo(200, 10);
+            context.lineTo(200, 200);
+            context.lineWidth = 5;
+            // set line color
+            context.strokeStyle = '#3B4839';
+            context.stroke();
+        }
+    </script>
+</body>
+
+</html>

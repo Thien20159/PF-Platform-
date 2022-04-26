@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="conteiner">
+        <h3 class="kitxva hide">Question</h3>
+        <div class="questionCon " id="questionCon">
+
+            <button class="anwser1 ">Anwser1</button>
+            <button class="anwser1 ">Anwser1</button>
+            <button class="anwser1 ">Anwser1</button>
+            <button class="anwser1 ">Anwser1</button>
+
+            <div class="controls">
+                <button id="start" class="anwser">Start</button>
+                <button id="next" class="anwser1">Next</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const start = document.getElementById('start');
+        const next = document.getElementById('next');
+        const questionCon = document.getElementById('questionCon');
+        const kixtva = document.querySelector('h3')
+        const anwser = document.querySelectorAll('.anwser1');
+
+
+        let shuffleQuestions, currentQuestionIndex
+
+
+        start.addEventListener('click', startGame);
+
+        function startGame() {
+            for (var i = 0; i < anwser.length; i += 1) {
+                anwser[i].style.display = 'block';
+            }
+            kixtva.classList.remove('hide');
+            start.classList.add('hide')
+
+            shuffleQuestions = questions.sort(() => Math.random() - .5)
+            currentQuestionIndex = 0;
+            setNextQuestion()
+        }
+
+        function setNextQuestion() {
+            resetState()
+            showQuestion(shuffleQuestions[currentQuestionIndex])
+        }
+
+        function resetState() {
+            next.classList.add('hide')
+            while (anwser.firstChild) {
+                anwser.removeChild(anwser.firstChild)
+            }
+        }
+    </script>
+</body>
+
+</html>

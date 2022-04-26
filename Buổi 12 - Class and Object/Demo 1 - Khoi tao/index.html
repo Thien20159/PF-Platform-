@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        class Car {
+            constructor(name, years) {
+                this.name = name;
+                this.years = years;
+            }
+            getAge() {
+                let date = new Date()
+                return date.getFullYear() - this.years;
+            }
+        }
+        let myCar = new Car("Ford", 2014)
+
+        for (const i in myCar) {
+            console.log(i + ": " + myCar[i]);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>KeyEvent Example</title>
+
+
+</head>
+
+<body>
+
+    <h3>KeyEvent example</h3>
+
+    <input type="text" onkeydown="keydownHandler(event)" onkeyup="keyupHandler(event)"
+        onkeypress="keypressHandler(event)" />
+    <br /><br />
+
+    <textarea id="log-div" rows="10" disabled>
+
+      </textarea>
+    <br />
+    <button onclick="clearLog()">Clear</button>
+
+
+
+    <script>
+        function keydownHandler(evt) {
+            appendLog("Keydown!");
+        }
+
+        function keyupHandler(evt) {
+            appendLog("Keyup!");
+        }
+
+        function keypressHandler(evt) {
+            appendLog("Keypress!");
+        }
+
+
+        function appendLog(text) {
+            var oldText = document.getElementById("log-div").value;
+            document.getElementById("log-div").value = oldText + "\n" + text;
+        }
+
+        function clearLog() {
+            document.getElementById("log-div").value = "";
+        }
+
+    </script>
+</body>
+
+</html>

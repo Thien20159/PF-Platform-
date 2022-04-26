@@ -1,0 +1,38 @@
+html, body{
+    width: 100%;
+    height: 90%;
+    margin: 0;
+    padding: 0;
+    /* color: white; */
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background: linear-gradient(to right, #42e24d, #33ada1);
+    /* background: linear-gradient(to left,#42e24d,#33ada1 ); */
+}
+.container, h2{
+    text-align: center;
+}
+h2{
+    font-weight: bold;
+    margin-left: 20%;
+    width: 60%;
+    height: 55px;
+    border-bottom: 3px solid black;
+    font-size: 30px;
+}
+.row-1 , .row-2, .row-3, .row-4, .row-5, .row-6{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.row-1 span{
+    width: 7.5%;
+    font-size: 20px;
+    font-weight: 700;
+    
+}
+.row-2 span, .row-3 span, .row-4 span, .row-5 span, .row-6 span{
+    width: 7.5%;
+    font-size: 20px;
+}

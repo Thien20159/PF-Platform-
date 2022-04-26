@@ -14,13 +14,14 @@
     <script>
         let indexContent = document.getElementById('index-content');
         // tao 1 the p
-        let p = document.createElement('p');
+        let p = document.createElement('button');
         // them noi dung cho the moi tao
         p.innerText = "This is an added p tag";
         // them phan tu vao DOM
         let a = document.createElement('a');
         a.appendChild(p)
-        indexContent.appendChild(a);
+
+        indexContent.appendChild(p);
         // indexContent.prepend(a);
 
         // Xoa phan tu
