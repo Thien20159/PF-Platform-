@@ -1,11 +1,14 @@
 const canvas = document.getElementById('canvas')
 const gameSize = 800 //width screen
-const unit = 40   //don vi trong game = 40px
+const unit = 30   //don vi trong game = 40px
 const snackColor = "white"
 canvas.width = canvas.height = gameSize
 const ctx = canvas.getContext('2d')
 const backGroundColor = "black"
-const gameDelay = 200
+const gameDelay = 150
+
+// setup point
+// run = false
 
 const LEFT = 37
 const UP = 38
@@ -37,7 +40,7 @@ class Snack{
         this.body = [
             new Vector2d(unit * 2, unit * 3),
             new Vector2d(unit * 3, unit * 3),
-            new Vector2d(unit * 4, unit * 3),
+            new Vector2d(unit * 4, unit * 3)
         ]
         //khoi tao toc do
         this.speed = new Vector2d(-1, 0)
